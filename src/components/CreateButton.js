@@ -32,7 +32,7 @@ const CreateButton = ({ text, toggleForm, showForm }) => {
 
   return (
     <div className="my-7 flex items-center justify-center">
-        <button className={colors.bgColor + " " + colors.hoverBgColor + " py-4 px-3 text-white rounded flex flex-row items-center justify-center"} onClick={() => {
+        <button className={colors.bgColor + " " + colors.hoverBgColor + " py-2 px-3 text-white rounded flex flex-row items-center justify-center"} onClick={() => {
             toggleForm()
             changeColor()
             }}>
