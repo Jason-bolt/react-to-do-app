@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CreateButton from './components/CreateButton';
 import Header from './components/Header'
+import TaskForm from './components/TaskForm';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <>
       <Header />
       <CreateButton text={text} toggleForm={toggleForm} showForm={showForm} />
+      {showForm && <TaskForm />}
     </>
   );
 }
