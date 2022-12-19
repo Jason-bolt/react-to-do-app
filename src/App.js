@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CreateButton from './components/CreateButton';
+import Footer from './components/Footer';
 import Header from './components/Header'
 import ShowTasks from './components/ShowTasks';
 import TaskForm from './components/TaskForm';
@@ -61,6 +62,7 @@ function App() {
       <CreateButton text={text} toggleForm={toggleForm} showForm={showForm} />
       {showForm && <TaskForm onAdd={addTask} />}
       <ShowTasks tasks={tasks} onDelete={deleteTask} />
+      <Footer />
     </>
   );
 }
