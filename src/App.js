@@ -39,6 +39,13 @@ function App() {
     ]
   )
 
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 10000)
+    const newTask = {id, ...task}
+    console.log(newTask)
+    setTasks([...tasks, newTask])
+  }
+
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id))
   }
@@ -52,7 +59,7 @@ function App() {
     <>
       <Header />
       <CreateButton text={text} toggleForm={toggleForm} showForm={showForm} />
-      {showForm && <TaskForm />}
+      {showForm && <TaskForm onAdd={addTask} />}
       <ShowTasks tasks={tasks} onDelete={deleteTask} />
     </>
   );
