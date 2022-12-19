@@ -6,7 +6,7 @@ const Footer = () => {
         Created by Appiatu Group of Companies Copyright &copy; 2022
         <div className="flex flex-row mt-3 space-x-4">
             <a href="https://www.linkedin.com/in/jason-appiatu/" target={'_blank'}><FaLinkedinIn /></a>
-            <a href="https://github.com/Jason-bolt" target={'_blank'}><FaGithub /></a>
+            <a href="https://github.com/Jason-bolt/react-to-do-app" target={'_blank'}><FaGithub /></a>
         </div>
     </footer>
   )
