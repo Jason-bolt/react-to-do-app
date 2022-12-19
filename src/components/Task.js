@@ -1,14 +1,14 @@
 import { IoMdCloseCircle } from "react-icons/io";
 
-const Task = ({ tasks }) => {
+const Task = ({ tasks, onDelete }) => {
   return (
     <>
     {
         tasks.map((task) => (
         <div className="border p-4 my-2 bg-green-50 relative w-full md:w-1/2 lg:w-1/3">
-            <div className="absolute top-3 right-3">
-                <IoMdCloseCircle className="text-red-500 text-xl hover:text-2xl" />
-            </div>
+            <button className="absolute top-3 right-3" onClick={() => onDelete(task.id)}>
+                <IoMdCloseCircle className="text-red-500 text-xl" />
+            </button>
             <h1 className="text-lg text-green-900">
                 {task.task}
             </h1>

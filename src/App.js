@@ -39,6 +39,10 @@ function App() {
     ]
   )
 
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id))
+  }
+
   const toggleForm = () => {
     setShowForm(!showForm)
   }
@@ -49,7 +53,7 @@ function App() {
       <Header />
       <CreateButton text={text} toggleForm={toggleForm} showForm={showForm} />
       {showForm && <TaskForm />}
-      <ShowTasks tasks={tasks} />
+      <ShowTasks tasks={tasks} onDelete={deleteTask} />
     </>
   );
 }
